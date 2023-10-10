@@ -215,3 +215,6 @@ frontend/gradlew
 frontend/gradlew.bat
 frontend/settings.gradle
 frontend/vite.config.ts
+farmersmarket-be/gradle/
+farmersmarket-be/gradlew
+farmersmarket-be/gradlew.bat
