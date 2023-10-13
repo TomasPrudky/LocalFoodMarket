@@ -5,27 +5,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Food {
+public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String description;
-    private double pricePerUnit;
-    private double quantityInStock;
-    private String variety;
-    private String pathToImage;
 
     @ManyToOne
-    private AppUser owner;
+    private Food food;
+    private int quantity;
+    private double price;
 
-    @OneToMany
-    private List<OrderItem> orderItems;
+    @ManyToOne
+    private CustomerOrder customerOrder;
 }

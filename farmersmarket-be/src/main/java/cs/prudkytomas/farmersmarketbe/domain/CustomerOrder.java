@@ -1,25 +1,31 @@
 package cs.prudkytomas.farmersmarketbe.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class CustomerOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long totalPrice;
     private LocalDateTime orderDate;
-    private Object orderItems;
+
+    @OneToOne
+    private AppUser buyer;
+
+    @OneToOne
+    private Seller seller;
+
+    @OneToMany
+    private List<Food> orderItems;
 }
