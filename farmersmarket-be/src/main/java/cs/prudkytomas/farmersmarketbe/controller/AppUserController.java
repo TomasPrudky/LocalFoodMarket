@@ -14,23 +14,23 @@ public class AppUserController {
 
     private final AppUserService appUserService;
 
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> getAppUser(@PathVariable Long id){
         return ResponseEntity.ok(appUserService.getAppUser(id));
     }
 
     @PostMapping()
     public ResponseEntity<?> createAppUser(@RequestBody DtoAppUserIn dto){
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(appUserService.createAppUser(dto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateAppUser(){
+    public ResponseEntity<?> updateAppUser(@PathVariable Long id){
         return ResponseEntity.ok(null);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteAppUser(){
+    public ResponseEntity<?> deleteAppUser(@PathVariable Long id){
         return ResponseEntity.ok(null);
     }
 }
