@@ -15,11 +15,11 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private Food food;
+    //@ManyToOne
+    //private Food food;
     private int quantity;
     private double price;
 
-    @ManyToOne
-    private CustomerOrder customerOrder;
+    //@ManyToOne
+    //private CustomerOrder customerOrder;
 }

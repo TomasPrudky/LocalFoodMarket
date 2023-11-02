@@ -20,12 +20,12 @@ public class CustomerOrder {
     private Long totalPrice;
     private LocalDateTime orderDate;
 
-    @OneToOne
-    private AppUser buyer;
+    //@OneToOne
+    //private AppUser buyer;
 
-    @OneToOne
-    private Seller seller;
+    //@OneToOne
+    //private Seller seller;
 
-    @OneToMany
-    private List<Food> orderItems;
+    //@OneToMany
+    //private List<Food> orderItems;
 }

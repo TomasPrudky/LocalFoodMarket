@@ -23,9 +23,9 @@ public class Food {
     private String variety;
     private String pathToImage;
 
-    @ManyToOne
-    private AppUser owner;
+    //@ManyToOne
+    //private AppUser owner;
 
-    @OneToMany
-    private List<OrderItem> orderItems;
+    //@OneToMany
+    //private List<OrderItem> orderItems;
 }

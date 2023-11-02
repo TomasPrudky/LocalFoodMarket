@@ -22,6 +22,6 @@ public class Seller {
     private String phone;
     private String email;
 
-    @OneToMany
-    private List<Food> offeredFood;
+    //@OneToMany
+    //private List<Food> offeredFood;
 }

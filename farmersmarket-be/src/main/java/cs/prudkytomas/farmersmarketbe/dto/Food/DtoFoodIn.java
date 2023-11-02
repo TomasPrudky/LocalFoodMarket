@@ -8,4 +8,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DtoFoodIn {
+
+    private String name;
+    private String description;
+    private double pricePerUnit;
+    private double quantityInStock;
+    private String variety;
+    private String pathToImage;
 }
