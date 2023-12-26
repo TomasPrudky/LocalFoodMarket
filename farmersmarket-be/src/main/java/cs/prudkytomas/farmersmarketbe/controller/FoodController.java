@@ -1,10 +1,8 @@
 package cs.prudkytomas.farmersmarketbe.controller;
 
 import cs.prudkytomas.farmersmarketbe.dto.Food.DtoFoodIn;
-import cs.prudkytomas.farmersmarketbe.dto.Food.DtoFoodOut;
-import cs.prudkytomas.farmersmarketbe.serivce.FoodService;
+import cs.prudkytomas.farmersmarketbe.service.FoodService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +14,7 @@ public class FoodController {
     private final FoodService foodService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getFood(@PathVariable Long id){
+    public ResponseEntity<?> getFood(@PathVariable Long id) throws Exception {
         return ResponseEntity.ok(foodService.getFood(id));
     }
 

@@ -1,8 +1,7 @@
 package cs.prudkytomas.farmersmarketbe.controller;
 
 import cs.prudkytomas.farmersmarketbe.dto.AppUser.DtoAppUserIn;
-import cs.prudkytomas.farmersmarketbe.dto.AppUser.DtoAppUserOut;
-import cs.prudkytomas.farmersmarketbe.serivce.AppUserService;
+import cs.prudkytomas.farmersmarketbe.service.AppUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

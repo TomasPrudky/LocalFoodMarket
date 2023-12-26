@@ -1,7 +1,6 @@
 package cs.prudkytomas.farmersmarketbe.controller;
 
-import cs.prudkytomas.farmersmarketbe.domain.CustomerOrder;
-import cs.prudkytomas.farmersmarketbe.serivce.CustomerOrderService;
+import cs.prudkytomas.farmersmarketbe.service.CustomerOrderService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

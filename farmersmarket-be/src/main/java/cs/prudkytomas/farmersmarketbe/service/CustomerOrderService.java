@@ -1,4 +1,4 @@
-package cs.prudkytomas.farmersmarketbe.serivce;
+package cs.prudkytomas.farmersmarketbe.service;
 
 import cs.prudkytomas.farmersmarketbe.domain.AppUser;
 import cs.prudkytomas.farmersmarketbe.domain.CustomerOrder;

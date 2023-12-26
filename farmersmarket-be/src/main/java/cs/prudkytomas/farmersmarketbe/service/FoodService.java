@@ -1,4 +1,4 @@
-package cs.prudkytomas.farmersmarketbe.serivce;
+package cs.prudkytomas.farmersmarketbe.service;
 
 import cs.prudkytomas.farmersmarketbe.domain.AppUser;
 import cs.prudkytomas.farmersmarketbe.domain.Food;
@@ -8,9 +8,11 @@ import cs.prudkytomas.farmersmarketbe.dto.Food.DtoFoodOut;
 import cs.prudkytomas.farmersmarketbe.repository.FoodRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -26,8 +28,9 @@ public class FoodService {
         return dtoFoodOut;
     }
 
-    public DtoFoodOut getFood(Long id) {
-        return convertToDto(foodRepository.findById(id).orElse(null));
+    public DtoFoodOut getFood(Long id) throws Exception {
+        Food food = foodRepository.findById(id).orElseThrow(() -> new Exception(""));
+        return convertToDto(food);
     }
 
 

@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /api/v1
+      context-path: /api/v1
 
 spring:
   datasource:
@@ -10,7 +10,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
 
 security:
   jwt:

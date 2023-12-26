@@ -1,4 +1,4 @@
-package cs.prudkytomas.farmersmarketbe.domain;
+package cs.prudkytomas.farmersmarketbe.domain.enums;
 
 public enum Category {
     FRUIT,

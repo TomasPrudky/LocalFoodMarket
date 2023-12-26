@@ -1,6 +1,6 @@
 package cs.prudkytomas.farmersmarketbe.dto.AppUser;
 
-import cs.prudkytomas.farmersmarketbe.domain.Role;
+import cs.prudkytomas.farmersmarketbe.domain.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,5 +12,4 @@ public class DtoAppUserOut {
 
     private String username;
     private String email;
-    private Role role;
 }
